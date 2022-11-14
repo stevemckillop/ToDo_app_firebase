@@ -1,8 +1,19 @@
 import React from 'react';
+import {FaRegTrashAlt} from "react-icons/fa"
 
-const ToDo = () => {
+const style = {
+
+}
+
+const ToDo = (props) => {
     return (
-        <li>ToDo</li>
+        <li className={style.li}>
+            <div className={style.row}>
+                <input type="checkbox" />
+                <p className={style.text}>{props.todo}</p>
+            </div>
+            <button><FaRegTrashAlt /> </button>
+        </li>
     )
 }
 
